@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,700;1,200&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container" id="tasklist">
+        <h1 class="header">TO DO LIST VUE</h1>
+        <div class="add-task">
+            <input type="text" autocomplete="off" placeholder="Add New Ask"   id="1" class="task-input" v-model="tasks.name" @keyup.enter="newItem">
+            <input type="submit"   value="" class="task-submit" title="Add Task" @click="newItem">
+        </div>
+
+        <ul class="task-list">
+            <li class="task-list-item" v-for="task in tasks">
+                <label  class="task-list-item-label">
+                    <input type="checkbox">
+                    <span>{{task.name}}</span>
+                </label>
+                <span class="delete-btn" title="Delete Task" @click="delItem(task)">{{task.del}}</span>
+            </li>
+        </ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.0"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html> 

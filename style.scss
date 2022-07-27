@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --checkbox-color: rgb(202, 60, 60);
+    --checkbox-shadow: rgba(238, 168, 168, 0.2);
+    --add-button: rgba(255, 255, 255, 0.7);
+    --add-button-shadow: rgba(238, 156, 167, 0.4);
+}
+
+
+body {
+    height: 100vh;
+    width: 100%;
+    padding: 0;
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image:
+        linear-gradient(62deg, rgba(69, 136, 199, 0.9) 13%, rgba(255, 122, 151, 0.4) 4%),
+        linear-gradient(44deg, rgba(0, 43, 99, 0.1) 39%, rgba(242, 140, 143, 0.5) 18%),
+        linear-gradient(118deg, rgba(82, 202, 242, 0.1) 40%, rgba(255, 155, 187, 0.5) 54%),
+        linear-gradient(58deg, rgba(90, 86, 237, 0.1) 83%, rgba(255, 150, 151, 0.5) 23%);
+    background-blend-mode: normal, lighten, hard-light, multiply;
+    overflow: hidden;
+
+}
+
+input {
+    outline: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.container {
+    max-width: 480px;
+    width: 100%;
+    max-height: 100%;
+    background-color: rgba(255,255,255,0.3);
+    border-radius: 25px;
+    padding: 25px;
+    overflow: hidden;
+    color: #222;
+}
+
+.header {
+    font-size: 20px;
+    line-height: 32px;
+    margin: 0 0 12px 0;
+    color: #222;
+}
+
+.task-submit {
+    height: 32px;
+    width: 32px;
+    flex-shrink: 0;
+    border: 0;
+    background: var(--add-button);
+    color: #222;
+    cursor: pointer;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Circle_arrow_down_font_awesome.svg/1200px-Circle_arrow_down_font_awesome.svg.png);
+    background-size: 18px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    box-shadow: 0 0 12 0 var(--add-button-shadow);
+    
+}
+
+.add-task {
+    height: 40px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.task-input {
+    width: 100%;
+    padding: 0 5px;
+    margin: 0 15px 0 0;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #222;
+    background-color: transparent;
+    color: #222;
+    box-shadow: none;
+    border-radius: 0 ;
+
+}
+
+
+.task-input::placeholder {
+    color: #222;
+}
+
+.task-list-item {
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-radius: 35px;
+    margin-bottom: 12px;
+}
+
+.task-list-item input{
+    border: 1p solid rgb(133, 90, 90);
+    width: 16px;
+}
+
+.task-list-item input:checked + span {
+    text-decoration: line-through #222;
+    color: #222;
+}
+
+.task-list-item-label {
+    display: flex;
+    align-items: flex-start;
+    color: #222;
+    margin-right: 8px;
+    font-size: 14px;
+    line-height: 22px;
+    position: relative;
+    transition: 0.2;
+    cursor: pointer;
+}
+
+.delete-btn {
+    margin-left: auto;
+    margin-right: 5px;
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-image: url(https://icons.iconarchive.com/icons/custom-icon-design/mono-general-4/512/trash-icon.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px;
+    cursor: pointer;    
+
+
+}
